@@ -43,7 +43,7 @@
          <dc-element>contributor</dc-element>
          <dc-qualifier>author</dc-qualifier>
          <repeatable>true</repeatable>
-         <label>Authors</label>
+         <label>The Author</label>
          <input-type>name</input-type>
          <hint>Enter the names of the authors of this item.</hint>
          <required></required>
@@ -70,6 +70,18 @@
          <hint>If the item has any alternative titles, please enter them here.</hint>
          <required></required>
        </field>
+       
+       <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>ispartofseries</dc-qualifier>
+         <repeatable>true</repeatable>
+         <label>Series/Report No.</label>
+         <input-type>series</input-type>
+         <hint>Enter the series and number assigned to this item by your community.</hint>
+         <required></required>
+       </field>
+
 
        <field>
          <dc-schema>dc</dc-schema>
@@ -125,8 +137,7 @@
          <repeatable>true</repeatable>
          <label>Identifiers</label>
          <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-         <hint>If the item has any identification numbers or codes associated with
-it, please enter the types and the actual numbers or codes.</hint>
+         <hint>If the item has any identification numbers or codes associated with it, please enter the types and the actual numbers or codes.</hint>
          <required></required>
        </field>
 
@@ -360,12 +371,12 @@ it, please enter the types and the actual numbers or codes.</hint>
        <stored-value></stored-value>
      </pair>
      <pair>
-       <displayed-value>English (United States)</displayed-value>
-       <stored-value>en_US</stored-value>
-      </pair>
-     <pair>
        <displayed-value>English</displayed-value>
        <stored-value>en</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Greek (Hellenic)</displayed-value>
+       <stored-value>el</stored-value>
      </pair>
      <pair>
        <displayed-value>Spanish</displayed-value>
