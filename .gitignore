@@ -30,3 +30,4 @@ META-INF/
 ##Mac noise
 .DS_Store
 mvn.log
+NOTES.md
