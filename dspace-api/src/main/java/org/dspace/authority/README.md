@@ -123,6 +123,8 @@ Override **hasTheSameInformationAs(Object o)** and include only the sensible fie
 ## Add the new class to the spring configuration
 config/spring/api/authority-services.xml
 
+<!-- ERROR: it's orcid-authority-services.xml -->
+
 ```
     <bean name="AuthorityTypes" class="org.dspace.authority.AuthorityTypes">
         <property name="types">

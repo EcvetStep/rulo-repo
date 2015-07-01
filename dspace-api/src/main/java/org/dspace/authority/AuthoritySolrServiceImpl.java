@@ -117,6 +117,7 @@ public class AuthoritySolrServiceImpl implements AuthorityIndexingService, Autho
     }
 
     public QueryResponse search(SolrQuery query) throws SolrServerException, MalformedURLException {
+        log.info("Searching:" + solr + "for: '" + query + "'");
         return getSolr().query(query);
     }
 

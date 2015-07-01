@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE input-forms SYSTEM "input-forms.dtd">
 
+<!-- 
+NOTE: (tkout)
+
+We're taking best effort to reuse DC elements as much as possible.
+
+SUMMARY OF DC TERMS:  http://dcmi.kc.tsukuba.ac.jp/dcregistry/navigateServlet
+TERMS IN DSPACE: http://localhost:8080/xmlui/admin/metadata-registry
+-->
+
 
 <input-forms>
 
@@ -37,199 +46,239 @@
  <form-definitions>
 
    <form name="traditional">
-     <page number="1">
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>contributor</dc-element>
-         <dc-qualifier>author</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>The Author</label>
-         <!-- <input-type>name</input-type> -->
-         <input-type>onebox</input-type>
-         <hint>Enter the names of the authors of this item.</hint>
-         <required></required>
-       </field>
+    <page number="1">
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>title</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>RULO Title</label>
+        <input-type>onebox</input-type>
+        <hint>Enter the title of the RULO...</hint>
+        <required>You must enter a main title for this RULO.</required>
+      </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>contributor</dc-element>
-         <dc-qualifier>other</dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Other Contributors</label>
-         <input-type>name</input-type>
-         <!-- <input-type>onebox</input-type> -->
-         <hint>Enter the names of other contributors of this item.</hint>
-         <required></required>
-       </field>
+  	  <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>identifier</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Identifier</label>
+        <input-type>onebox</input-type>
+        <hint>Enter the primary identifier for this RULO definition.</hint>
+        <!-- <required>You must enter the primary identifier.</required> -->
+      </field>
 
-       <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>title</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Title</label>
-         <input-type>onebox</input-type>
-         <hint>Enter the main title of the item.</hint>
-         <required>You must enter a main title for this item.</required>
-       </field>
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>relation</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>true</repeatable>
+        <label>Related to</label>
+        <input-type>onebox</input-type>
+        <hint>Define all related RULOs.</hint>
+        <!-- <required>You must enter the primary identifier.</required> -->
+      </field>
 
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>id</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Identifier</label>
-         <input-type>onebox</input-type>
-         <hint>Several identifiers can refer to the same RULO Resource.</hint>
-         <required>You must enter an identifier for this item.</required>
-       </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>contributor</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Organisation</label>
+        <input-type>onebox</input-type>
+        <hint>Enter the name of the competent organisation that is responsible for the definition this RULO.</hint>
+        <required></required>
+      </field>
+
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>contributor</dc-element>
+        <dc-qualifier>author</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Contact</label>
+        <input-type>name</input-type>
+        <hint>Enter the name of the contact person responsible for this RULO resource.</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>contributor</dc-element>
+        <dc-qualifier>editor</dc-qualifier>
+        <repeatable>true</repeatable>
+        <label>Editor(s)</label>
+        <input-type>name</input-type>
+        <hint>Enter the name(s) of the editor(s) of the definition of this RULO.</hint>
+        <required></required>
+      </field>
+
+
+  	  <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>identifier</dc-element>
+        <dc-qualifier>other</dc-qualifier>
+        <repeatable>true</repeatable>
+        <label>Other identifiers</label>
+        <input-type>onebox</input-type>
+        <hint>Indicate other identifiers that can refer to the same RULO Resource</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>subject</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>true</repeatable>
+        <label>Subject area</label>
+        <input-type>onebox</input-type>
+        <hint>Indicate the subject areas for this RULO Resource</hint>
+        <required></required>
+      </field>
+
 	   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>extraID</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>true</repeatable>
-         <label>Extra ID</label>
-         <input-type>onebox</input-type>
-         <hint>Several identifiers can refer to the same RULO Resource.</hint>
-         <required></required>
-       </field>
-	   
-       <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>abbr</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Abbreviation</label>
-         <input-type>onebox</input-type>
-         <hint>Short alternative for title; human-readable.</hint>
-         <required></required>
-       </field>
+      <field>
+        <dc-schema>rulo</dc-schema>
+        <dc-element>abbr</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Abbreviation</label>
+        <input-type>onebox</input-type>
+        <hint>Short alternative for title; human-readable.</hint>
+        <required></required>
+      </field>
+    </page>
 
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>created</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Created</label>
-         <input-type>date</input-type>
-         <hint>Expresses the creation date of the RULO resource.
-                        You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required></required>
-       </field>
+<!--     
+    <page number="2">
+
+  	  <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>date</dc-element>
+        <dc-qualifier>created</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Created</label>
+        <input-type>date</input-type>
+        <hint>Expresses the creation date of the RULO resource.
+              You can leave out the day and/or month if they aren't applicable.</hint>
+        <required></required>
+      </field>
        
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>issued</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Issued</label>
-         <input-type>date</input-type>
-         <hint>Date of formal issuance (e.g., publication) of the RULO resource.
-                        You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required></required>
-       </field>
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>date</dc-element>
+        <dc-qualifier>issued</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Issued</label>
+        <input-type>date</input-type>
+        <hint>Date of formal issuance (e.g., publication) of the RULO resource.
+              You can leave out the day and/or month if they aren't applicable.</hint>
+        <required></required>
+      </field>
 
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>version</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Version</label>
-         <input-type>onebox</input-type>
-         <hint>Supplementary means of identifying a version of a RULOstructure, in conjunction with the main identifier.</hint>
-         <required></required>
+      <field>
+        <dc-schema>rulo</dc-schema>
+        <dc-element>version</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Version</label>
+        <input-type>onebox</input-type>
+        <hint>Supplementary means of identifying a version of a RULOstructure, in conjunction with the main identifier.</hint>
+        <required></required>
        </field>
 	   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>modified</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-         <repeatable>true</repeatable>
-         <label>Modified</label>
-         <input-type>date</input-type>
-         <hint>Date on which the RULO resource was changed.
-		                         You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required></required>
-       </field>
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>date</dc-element>
+        <dc-qualifier>modified</dc-qualifier>
+  -->
+        <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+  <!--
+        <repeatable>true</repeatable>
+        <label>Modified</label>
+        <input-type>date</input-type>
+        <hint>Date on which the RULO resource was changed.
+              You can leave out the day and/or month if they aren't applicable.</hint>
+        <required></required>
+      </field>
 	   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>validityStart</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Validity Start</label>
-         <input-type>date</input-type>
-         <hint>Expresses the start date of the validity of the RULO resource.
-		                         You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required></required>
-       </field>
-	   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>validityEnd</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Validity End</label>
-         <input-type>date</input-type>
-         <hint>Expresses the end date, or expiry of the validity of the RULO resource.
-		                         You can leave out the day and/or month if they aren't
-                        applicable.</hint>
-         <required></required>
-       </field>
-		   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>rights</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <!-- An input-type of twobox MUST be marked as repeatable -->
-         <repeatable>true</repeatable>
-         <label>Rights</label>
-         <input-type>onebox</input-type>
-         <hint>Information about rights held in and over the RULO resource.</hint>
-         <required></required>
-         <vocabulary>srsc</vocabulary>
-       </field>
-	   
-       <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>language</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Language</label>
-         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-         <hint>Select the language of the resource.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
-         <required></required>
-       </field>
-	   
-	   <field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>description</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Description</label>
-         <input-type>textarea</input-type>
-         <hint>Description of the RULO resource.</hint>
-         <required></required>
-		</field>
-		
-		<field>
-         <dc-schema>rulo</dc-schema>
-         <dc-element>furtherInformation</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Further Information</label>
-         <input-type>textarea</input-type>
-         <hint>Represents information beyond the description.</hint>
-         <required></required>
-       </field>
-	</page>   
-   </form>
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>date</dc-element>
+        <dc-qualifier>validFrom</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Valid from</label>
+        <input-type>date</input-type>
+        <hint>Expresses the start date of the validity of the RULO resource.
+              You can leave out the day and/or month if they aren't applicable.</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>date</dc-element>
+        <dc-qualifier>validTo</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Validity End</label>
+        <input-type>date</input-type>
+        <hint>Expresses the end date, or expiry of the validity of the RULO resource.
+              You can leave out the day and/or month if they aren't applicable.</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>rulo</dc-schema>
+        <dc-element>rights</dc-element>
+        <dc-qualifier></dc-qualifier>
+-->
+        <!-- An input-type of twobox MUST be marked as repeatable -->
+<!--
+        <repeatable>true</repeatable>
+        <label>Rights</label>
+        <input-type>onebox</input-type>
+        <hint>Information about rights held in and over the RULO resource.</hint>
+        <required></required>
+        <vocabulary>srsc</vocabulary>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>language</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Language</label>
+        <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+        <hint>Select the language of the resource.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>description</dc-element>
+        <dc-qualifier>abstract</dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Description</label>
+        <input-type>textarea</input-type>
+        <hint>A short (abstract) description of the RULO resource.</hint>
+        <required></required>
+      </field>
+
+      <field>
+        <dc-schema>dc</dc-schema>
+        <dc-element>description</dc-element>
+        <dc-qualifier></dc-qualifier>
+        <repeatable>false</repeatable>
+        <label>Further Information</label>
+        <input-type>textarea</input-type>
+        <hint>Represents information beyond the description.</hint>
+        <required></required>
+      </field>
+    </page>
+-->
+
+  </form>
    
  </form-definitions>
 

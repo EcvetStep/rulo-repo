@@ -421,6 +421,8 @@
     <!-- Like the header, the footer contains various miscellaneous text, links, and image placeholders -->
     <xsl:template name="buildFooter">
         <div id="ds-footer">
+            Copyright  &#169; 2014-2015 ECVET-STEP. Some Rights Reserved.
+            <br>This project has been funded with support from the European Commission. This communication reflects the views only of the authors, and the Commission cannot be held responsible for any use which may be made of the information contained herein.</br>
             <i18n:text>xmlui.dri2xhtml.structural.footer-promotional</i18n:text>
             <div id="ds-footer-links">
                 <a>
@@ -446,19 +448,11 @@
                     <xsl:text>/htmlmap</xsl:text>
                 </xsl:attribute>
             </a>
+            <div id="eu-logo" class="pull-right">
+                <a title="@European Commission LLP" target="_blank" href="http://ec.europa.eu/education/">
+                    <img alt="@European Commission Long Lifelearning Programme" src="{concat($theme-path, '/images/EU_flag_LLP_EN-small.png')}"/></a>
+            </div>
         </div>
-        <!--
-            <a href="http://di.tamu.edu">
-                <div id="ds-footer-logo"></div>
-            </a>
-            <p>
-            This website is using Manakin, a new front end for DSpace created by Texas A&amp;M University
-            Libraries. The interface can be extensively modified through Manakin Aspects and XSL based Themes.
-            For more information visit
-            <a href="http://di.tamu.edu">http://di.tamu.edu</a> and
-            <a href="http://dspace.org">http://dspace.org</a>
-            </p>
-        -->
     </xsl:template>
 
 

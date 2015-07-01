@@ -63,10 +63,10 @@ img.ds-authority-confidence.cf-accepted
   { background: transparent url(../../images/authority_control/confidence/6-thumb2.gif); }
 
 /* hide authority-value inputs in forms */
-input.ds-authority-value { display:none; }
-/** XXX Change to this to get the authority value to show up for debugging:
+/* input.ds-authority-value { display:none; }*/
+/** XXX Change to this to get the authority value to show up for debugging: **/
+/* RULO-REPO */
  input.ds-authority-value { display:inline; }
-**/
 
 /* ..except, show authority-value inputs in on the Item EditMetadata page */
 input.ds-authority-value.ds-authority-visible { display: inline; }

@@ -31,3 +31,5 @@ META-INF/
 .DS_Store
 mvn.log
 NOTES.md
+NOTES-authority.md
+local

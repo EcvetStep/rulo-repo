@@ -696,7 +696,10 @@
                     <hr/>
                     <div class="col-xs-7 col-sm-8">
                         <div>
-                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a>
+                            Copyright  &#169; 2014-2015 <a href="http://ecvet-step.eu" target="_blank"><b>ECVET-STEP</b></a> project. Some Rights Reserved.
+                            <p style="font-size: small; color: #074f94">The ECVET STEP project has been funded with support from the European Commission. This communication reflects the views only of the authors, and the Commission cannot be held responsible for any use which may be made of the information contained herein.</p>
+                            <p style="font-size: smaller; color: #cacaca">
+                            <a href="http://www.dspace.org/" target="_blank">DSpace software</a> copyright&#160;&#169;&#160;2002-2015&#160; <a href="http://www.duraspace.org/" target="_blank">DuraSpace</a></p>
                         </div>
                         <div class="hidden-print">
                             <a>
@@ -720,11 +723,10 @@
                     </div>
                     <div class="col-xs-5 col-sm-4 hidden-print">
                         <div class="pull-right">
-                            <span class="theme-by">Theme by&#160;</span>
-                            <br/>
-                            <a title="@mire NV" target="_blank" href="http://atmire.com">
-                                <img alt="@mire NV" src="{concat($theme-path, '/images/@mirelogo-small.png')}"/>
-                            </a>
+                            <!-- <span class="theme-by">Funded by&#160;</span> -->
+                            <!-- <br/> -->
+                            <a title="European Commission LLP" target="_blank" href="http://ec.europa.eu/education/">
+                                <img alt="European Commission Lifelong Learning Programme" src="{concat($theme-path, '/images/EU_flag_LLP_EN-small.png')}"/></a>
                         </div>
 
                     </div>
