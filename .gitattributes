@@ -12,3 +12,7 @@
 *.PDF  diff=astextplain
 *.rtf  diff=astextplain
 *.RTF  diff=astextplain
+
+# encrypt some files
+NOTES*md filter=git-crypt diff=git-crypt
+
