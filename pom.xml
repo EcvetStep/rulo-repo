@@ -5,15 +5,15 @@
    <artifactId>dspace-parent</artifactId>
    <packaging>pom</packaging>
    <version>6.0-SNAPSHOT</version>
-   <name>DSpace Parent Project</name>
+   <name>RULO Repo Parent Project</name>
    <description>
-   	DSpace open source software is a turnkey institutional repository application.
+    RULO Repo, based on the DSpace open source software.
    </description>
-   <url>https://github.com/dspace/DSpace</url>
+   <url>https://github.com/EcvetStep/rulo-repo</url>
 
    <organization>
-      <name>DuraSpace</name>
-      <url>http://www.dspace.org</url>
+      <name>ECVET STEP consortium</name>
+      <url>http://ecvet-step.eu</url>
    </organization>
 
     <!-- brings the sonatype snapshot repository and signing requirement on board -->
@@ -387,7 +387,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>license-maven-plugin</artifactId>
-                        <version>1.8</version>
+                        <version>2.11</version>
                         <!-- This plugin only needs to be run on the Parent POM
                              as it aggregates results from all child POMs. -->
                         <inherited>false</inherited>
@@ -546,9 +546,10 @@
         <profile>
             <id>dspace-jspui</id>
             <activation>
-                <file>
-                    <exists>dspace-jspui/pom.xml</exists>
-                </file>
+                <!--<file>-->
+                    <!--<exists>dspace-jspui/pom.xml</exists>-->
+                <!--</file>-->
+                <activeByDefault>false</activeByDefault>
             </activation>
             <modules>
                 <module>dspace-jspui</module>
@@ -561,9 +562,10 @@
         <profile>
             <id>dspace-rdf</id>
             <activation>
-                <file>
-                    <exists>dspace-rdf/pom.xml</exists>
-                </file>
+                <activeByDefault>false</activeByDefault>
+                <!--<file>-->
+                    <!--<exists>dspace-rdf/pom.xml</exists>-->
+                <!--</file>-->
             </activation>
             <modules>
                 <module>dspace-rdf</module>
@@ -590,9 +592,10 @@
         <profile>
             <id>dspace-sword</id>
             <activation>
-                <file>
-                    <exists>dspace-sword/pom.xml</exists>
-                </file>
+                <activeByDefault>false</activeByDefault>
+                <!--<file>-->
+                    <!--<exists>dspace-sword/pom.xml</exists>-->
+                <!--</file>-->
             </activation>
             <modules>
                 <module>dspace-sword</module>
@@ -621,9 +624,10 @@
         <profile>
             <id>dspace-swordv2</id>
             <activation>
-                <file>
-                    <exists>dspace-swordv2/pom.xml</exists>
-                </file>
+                <activeByDefault>false</activeByDefault>
+                <!--<file>-->
+                    <!--<exists>dspace-swordv2/pom.xml</exists>-->
+                <!--</file>-->
             </activation>
             <modules>
                 <module>dspace-swordv2</module>
