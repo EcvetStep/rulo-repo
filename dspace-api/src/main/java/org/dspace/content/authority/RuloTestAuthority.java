@@ -14,37 +14,36 @@ package org.dspace.content.authority;
 public class RuloTestAuthority implements ChoiceAuthority
 {
     private static String values[] = {
-        "jan",
-        "feb",
-        "mar",
-        "apr",
-        "may",
-        "jun",
-        "jul",
-        "aug",
-        "sep",
-        "oct",
-        "nov",
-        "dec"
+            "jan",
+            "feb",
+            "mar",
+            "apr",
+            "may",
+            "jun",
+            "jul",
+            "aug",
+            "sep",
+            "oct",
+            "nov",
+            "dec"
     };
 
     private static String labels[] = {
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
     };
 
-    public Choices getMatches(String field, String query, int collection, int start, int limit, String locale)
-    {
+    public Choices getMatches(String field, String query, int collection, int start, int limit, String locale) {
         int dflt = -1;
         Choice v[] = new Choice[values.length];
         for (int i = 0; i < values.length; ++i)
@@ -58,8 +57,7 @@ public class RuloTestAuthority implements ChoiceAuthority
         return new Choices(v, 0, v.length, Choices.CF_AMBIGUOUS, false, dflt);
     }
 
-    public Choices getBestMatch(String field, String text, int collection, String locale)
-    {
+    public Choices getBestMatch(String field, String text, int collection, String locale) {
         for (int i = 0; i < values.length; ++i)
         {
             if (text.equalsIgnoreCase(values[i]))
@@ -72,8 +70,7 @@ public class RuloTestAuthority implements ChoiceAuthority
         return new Choices(Choices.CF_NOTFOUND);
     }
 
-    public String getLabel(String field, String key, String locale)
-    {
+    public String getLabel(String field, String key, String locale) {
         return labels[Integer.parseInt(key)];
     }
 }

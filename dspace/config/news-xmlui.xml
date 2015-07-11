@@ -2,8 +2,12 @@
 <document xmlns="http://di.tamu.edu/DRI/1.0/" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" version="1.1">
 <body>
 <div id="file.news.div.news" n="news" rend="primary">
-<head>DSpace Repository</head>
-<p>DSpace is a digital service that collects, preserves, and distributes digital material. Repositories are important tools for preserving an organization&apos;s legacy; they facilitate digital preservation and scholarly communication.</p>
+<head>RULO Repository</head>
+<p>Welcome to the 1st digital repository of <b>R</b>eusable <b>U</b>nits of <b>L</b>earning <b>O</b>utcomes!</p>
+<ul>
+    <li><b>7-Jul-2015:</b>The repository is currently under pilot testing.</li>
+</ul>
+<p>More exciting news to appear here.</p>
 </div>
 </body>
 <options/>

@@ -1,6 +1,20 @@
 <?xml version="1.0"?>
 <commands>
     <command>
+        <name>tkta</name>
+        <description>Run the TK Test Authority</description>
+        <step>
+            <class>org.dspace.content.authority.TKTestAuthority</class>
+        </step>
+    </command>
+    <command>
+        <name>rulo-auth</name>
+        <description>Display contents of the RULO Authority</description>
+        <step>
+            <class>org.dspace.content.authority.RuloAuthority</class>
+        </step>
+    </command>
+    <command>
         <name>checker</name>
         <description>Run the checksum checker</description>
         <step>
