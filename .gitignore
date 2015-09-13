@@ -31,3 +31,6 @@ META-INF/
 .DS_Store
 local/
 mvn.log
+
+## Bower
+bower_components/
