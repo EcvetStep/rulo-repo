@@ -129,9 +129,10 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <echo>PATH=${env.PATH}</echo>
-                                <echo>GEM_PATH=${env.GEM_PATH}</echo>
-                                <echo>GEM_HOME=${env.GEM_HOME}</echo>
+                                <echo>PATH=${env.PATH}</echo>b
+                                <!-- ~~~ no need for GEM_PATH and GEM_HOME. Moreover, mvn build breaks if not unexpectedly if one of them is not set in the environment. -->
+                                <!--<echo>GEM_PATH=${env.GEM_PATH}</echo>-->
+                                <!--<echo>GEM_HOME=${env.GEM_HOME}</echo>-->
                                 <echo>mirage2.deps.included=${mirage2.deps.included}</echo>
                                 <echo>grunt.color.scheme=${grunt.color.scheme}</echo>
                                 <echo>grunt.environment=${grunt.environment}</echo>
@@ -200,7 +201,7 @@
             <activation>
                 <property>
                     <name>mirage2.deps.included</name>
-                    <value>false</value>
+                    <value>true</value>
                 </property>
             </activation>
             <build>
@@ -301,8 +302,9 @@
                                                 </workingDirectory>
                                                 <environmentVariables>
                                                     <PATH>${env.PATH}</PATH>
-                                                    <GEM_PATH>${env.GEM_PATH}</GEM_PATH>
-                                                    <GEM_HOME>${env.GEM_HOME}</GEM_HOME>
+                                                    <!-- ~~~ no need for GEM_PATH and GEM_HOME -->
+                                                    <!--<GEM_PATH>${env.GEM_PATH}</GEM_PATH>-->
+                                                    <!--<GEM_HOME>${env.GEM_HOME}</GEM_HOME>-->
                                                     <LC_CTYPE>UTF-8</LC_CTYPE>
                                                 </environmentVariables>
                                             </configuration>
@@ -325,6 +327,8 @@
                 <activeByDefault>true</activeByDefault>
                 <property>
                     <name>mirage2.deps.included</name>
+                    <!-- <value>false</value> -->
+                    <!-- NOTE @tk: changed this to true -->
                     <value>true</value>
                 </property>
             </activation>
@@ -361,8 +365,8 @@
                             <groupId>com.github.eirslett</groupId>
                             <artifactId>frontend-maven-plugin</artifactId>
                             <!-- ~~~~ -->
-                            <!--<version>0.0.16</version>-->
-                            <version>0.0.24</version>
+                            <version>0.0.16</version>
+                            <!--<version>0.0.24</version>-->
                         </plugin>
                     </plugins>
                 </pluginManagement>
