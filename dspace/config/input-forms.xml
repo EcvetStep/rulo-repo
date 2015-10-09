@@ -117,24 +117,28 @@ TERMS IN DSPACE: http://localhost:8080/xmlui/admin/metadata-registry
                 </field>
 
                 <field>
-                    <dc-schema>dc</dc-schema>
+<!--                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
-                    <dc-qualifier>validFrom</dc-qualifier>
+                    <dc-qualifier>validFrom</dc-qualifier> -->
+                    <dc-schema>rulo</dc-schema>
+                    <dc-element>validityStart</dc-element>
                     <repeatable>false</repeatable>
                     <label>Valid from</label>
                     <input-type>date</input-type>
-                    <hint>Expresses the start date of the validity of the RULO resource. You can leave out the day and/or month if they aren't applicable.</hint>
+                    <hint>Enter the start date of the validity of the RULO resource. You can leave out the day and/or month if they aren't applicable.</hint>
                     <required></required>
                 </field>
 
                 <field>
-                    <dc-schema>dc</dc-schema>
+<!--                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
-                    <dc-qualifier>validTo</dc-qualifier>
+                    <dc-qualifier>validTo</dc-qualifier> -->
+                    <dc-schema>rulo</dc-schema>
+                    <dc-element>validityEnd</dc-element>
                     <repeatable>false</repeatable>
                     <label>Validity End</label>
                     <input-type>date</input-type>
-                    <hint>Expresses the end date, or expiry of the validity of the RULO resource. You can leave out the day and/or month if they aren't applicable.</hint>
+                    <hint>Enter the end date, or expiry of the validity of the RULO resource. You can leave out the day and/or month if they aren't applicable.</hint>
                     <required></required>
                 </field>
 
